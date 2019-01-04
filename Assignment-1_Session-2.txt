@@ -1,0 +1,45 @@
+Assignment-1_Session-2
+
+Problem Statement
+
+1. How to import SAS XPORT files into R with the foreign package?
+Answer-
+setwd()
+library(foreign)
+read.xport("example.sas") # Here we take example.sas as a SAS file.
+
+2. How to import SAS files into R with the Haven package?
+Answer-
+setwd()
+library(haven)
+read_sas(data_file, catalog_file = NULL, encoding = NULL,
+         cols_only = NULL) # data_file is the name of the SAS file which we want to import to R.
+
+3. How to read Weka Attribute-Relation File Format(ARFF) files in R?
+Answer-
+setwd()
+library(foreign)
+read.arff(file) # file is the name of the arff file which we want to import to R.
+
+4. How to read heavy csv/tsv file using readr package?
+Answer-
+library(readr)
+# file.csv is the name of the csv file which we want to read in R.
+read_csv(file.csv, col_names = TRUE, col_types = NULL,
+         
+         locale = default_locale(), na = c("", "NA"), quoted_na = TRUE,
+         
+         quote = "\"", comment = "", trim_ws = TRUE, skip = 0, n_max = Inf,
+         
+         guess_max = min(1000, n_max), progress = show_progress()) 
+
+
+library(readr)
+# file1.tsv is the name of the csv file which we want to read in R.
+read_tsv(file1.tsv, col_names = TRUE, col_types = NULL,
+         
+         locale = default_locale(), na = c("", "NA"), quoted_na = TRUE,
+         
+         quote = "\"", comment = "", trim_ws = TRUE, skip = 0, n_max = Inf,
+         
+         guess_max = min(1000, n_max), progress = show_progress()) 
